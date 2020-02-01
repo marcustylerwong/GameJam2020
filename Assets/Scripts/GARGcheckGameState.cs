@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GARGcheckGameState : MonoBehaviour
+public class checkGameState : MonoBehaviour
 {
     private bool isFinished;
     // Start is called before the first frame update
