@@ -28,7 +28,7 @@ public class mouseDrag : MonoBehaviour {
         offsetPosition1 = new Vector3(originalPosition.x + offsetAmount, originalPosition.y + offsetAmount, originalPosition.z + offsetAmount);
         offsetPosition2 = new Vector3(originalPosition.x - offsetAmount, originalPosition.y - offsetAmount, originalPosition.z - offsetAmount);
         finish = false;
-        rb.AddExplosionForce(60f, new Vector3 (0,0,0), 3);
+        rb.AddExplosionForce(200f, new Vector3 (0,0,0), 5);
     }
     
     void OnMouseDown() {
