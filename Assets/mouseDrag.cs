@@ -13,15 +13,26 @@ public class mouseDrag : MonoBehaviour {
     public MeshCollider mc;
     public Vector3 offsetPosition1;
     public Vector3 offsetPosition2;
+<<<<<<< Updated upstream
+=======
+    public float offsetAmount = 5f;
+    public bool finish;
+>>>>>>> Stashed changes
     // Start is called before the first frame update
     void Start()
     {
         originalPosition = transform.position;
         originalRotation = transform.rotation;
         rb = GetComponent<Rigidbody>();
+<<<<<<< Updated upstream
         offsetPosition1 = new Vector3(originalPosition.x +5, originalPosition.y +5, originalPosition.z +5);
         offsetPosition2 = new Vector3(originalPosition.x -5, originalPosition.y -5, originalPosition.z -5);
         
+=======
+        offsetPosition1 = new Vector3(originalPosition.x + offsetAmount, originalPosition.y + offsetAmount, originalPosition.z + offsetAmount);
+        offsetPosition2 = new Vector3(originalPosition.x - offsetAmount, originalPosition.y - offsetAmount, originalPosition.z - offsetAmount);
+        finish = false;
+>>>>>>> Stashed changes
         //BoxCollider original = gameObject.AddComponent<BoxCollider>();
         //original.transform.SetPositionAndRotation(originalPosition, originalRotation);
     }
@@ -62,6 +73,11 @@ public class mouseDrag : MonoBehaviour {
             transform.SetPositionAndRotation(originalPosition, originalRotation);
         }
         rb.freezeRotation = false;
-
     }
+
+    // void Update() {
+    //     if (finish == true) {
+    //         Debug.Log("FINISH PIECE");
+    //     }
+    // }
 }
