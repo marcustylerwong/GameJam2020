@@ -13,14 +13,15 @@ public class mouseDrag : MonoBehaviour {
     public MeshCollider mc;
     public Vector3 offsetPosition1;
     public Vector3 offsetPosition2;
+    public float offsetAmount = 5f;
     // Start is called before the first frame update
     void Start()
     {
         originalPosition = transform.position;
         originalRotation = transform.rotation;
         rb = GetComponent<Rigidbody>();
-        offsetPosition1 = new Vector3(originalPosition.x +5, originalPosition.y +5, originalPosition.z +5);
-        offsetPosition2 = new Vector3(originalPosition.x -5, originalPosition.y -5, originalPosition.z -5);
+        offsetPosition1 = new Vector3(originalPosition.x + offsetAmount, originalPosition.y + offsetAmount, originalPosition.z + offsetAmount);
+        offsetPosition2 = new Vector3(originalPosition.x - offsetAmount, originalPosition.y - offsetAmount, originalPosition.z - offsetAmount);
         
         //BoxCollider original = gameObject.AddComponent<BoxCollider>();
         //original.transform.SetPositionAndRotation(originalPosition, originalRotation);
