@@ -13,7 +13,7 @@ public class mouseDrag : MonoBehaviour {
     public MeshCollider mc;
     public Vector3 offsetPosition1;
     public Vector3 offsetPosition2;
-    public float offsetAmount = 5f;
+    public float offsetAmount = 1f;
     public bool finish;
   
     // Start is called before the first frame update
@@ -28,8 +28,9 @@ public class mouseDrag : MonoBehaviour {
         offsetPosition1 = new Vector3(originalPosition.x + offsetAmount, originalPosition.y + offsetAmount, originalPosition.z + offsetAmount);
         offsetPosition2 = new Vector3(originalPosition.x - offsetAmount, originalPosition.y - offsetAmount, originalPosition.z - offsetAmount);
         finish = false;
+        rb.AddExplosionForce(60f, new Vector3 (0,0,0), 3);
     }
-
+    
     void OnMouseDown() {
 
         mZCoord = Camera.main.WorldToScreenPoint(
