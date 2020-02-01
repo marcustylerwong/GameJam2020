@@ -19,7 +19,14 @@ public class checkGameState : MonoBehaviour
             if (transform.position == child.originalPosition &&
             transform.rotation == child.originalRotation) {
                 child.finish = true;
-                Debug.Log("Help");
+            }
+            if (allChildren[0].finish == true && 
+            allChildren[1].finish == true && 
+            allChildren[2].finish == true && 
+            allChildren[3].finish == true && 
+            allChildren[4].finish == true) {
+                Debug.Log("ok");
+                isFinished = true;
             }
         }
     }
