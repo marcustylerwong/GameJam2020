@@ -8,7 +8,7 @@
         private Vector3 point;//the coord to the point where the camera looks at
        
         void Start () {//Set up things on the start method
-            point = target.transform.position;//get target's coords
+            point = new Vector3(target.transform.position.x, target.transform.position.y +5, target.transform.position.z);//get target's coords
             transform.LookAt(target);//makes the camera look to it
         }
        
