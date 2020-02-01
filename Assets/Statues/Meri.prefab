@@ -140,7 +140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3265766382831065164}
-  - component: {fileID: 7505497227621131851}
+  - component: {fileID: 7070002690115233571}
   m_Layer: 0
   m_Name: Meri
   m_TagString: Untagged
@@ -167,7 +167,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7505497227621131851
+--- !u!114 &7070002690115233571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1948102470556723807}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a7c5112c902d48e5aaf6a1374628184, type: 3}
+  m_Script: {fileID: 11500000, guid: f5a8491d4dc71424a97243b520ec2d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2113531288611587334
