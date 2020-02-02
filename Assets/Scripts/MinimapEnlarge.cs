@@ -19,7 +19,7 @@ public class MinimapEnlarge : MonoBehaviour
         m_MainCamera.enabled = true;
         //Use this to disable secondary Camera
         m_CameraTwo.enabled = false;
-        
+
     }
 
     void Update()
@@ -36,7 +36,7 @@ public class MinimapEnlarge : MonoBehaviour
                 //The Main first Camera is disabled
                 m_MainCamera.enabled = false;
 
-                minimap.enabled = false; 
+                minimap.enabled = false;
             }
             //Otherwise, if the Main Camera is not enabled, switch back to the Main Camera on a key press
             else if (!m_MainCamera.enabled)
