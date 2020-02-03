@@ -5,7 +5,7 @@ public class cameraPanner : MonoBehaviour
 {
 
     public Transform target;//the target object
-    public float speedMod = 2.0f;//a speed modifier
+    private float speedMod = 10f;//a speed modifier
     private Vector3 point;//the coord to the point where the camera looks at
 
     void Start()
@@ -17,6 +17,12 @@ public class cameraPanner : MonoBehaviour
 
     void Update()
     {//makes the camera rotate around "point" coords, rotating around its Y axis, 20 degrees per second times the speed modifier
-        transform.RotateAround(point, new Vector3(0.0f, 1.0f, 0.0f), 20 * Time.deltaTime * speedMod);
+        if (Input.GetKey("d")){
+            Debug.Log("d");
+            transform.RotateAround(point, new Vector3(0.0f, 1.0f, 0.0f), 20 * Time.deltaTime * speedMod);
+        }
+        if (Input.GetKey("a")){
+            transform.RotateAround(point, new Vector3(0f, -1.0f, 0f), 20* Time.deltaTime* speedMod);
+        }
     }
 }

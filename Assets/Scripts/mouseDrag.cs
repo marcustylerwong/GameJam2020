@@ -15,10 +15,12 @@ public class mouseDrag : MonoBehaviour {
     public Vector3 offsetPosition2;
     public float offsetAmount = 1f;
     public bool finish;
+    public Camera cam;
   
     // Start is called before the first frame update
     void Start()
     {
+        Camera cam = gameObject.GetComponent<Camera>();
         originalPosition = transform.position;
         originalRotation = transform.rotation;
         rb = GetComponent<Rigidbody>();
@@ -51,8 +53,9 @@ public class mouseDrag : MonoBehaviour {
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
     void OnMouseDrag() {
-        transform.position = GetMouseAsWorldPoint() + mOffset;
+            transform.position = GetMouseAsWorldPoint() + mOffset;
     }
+    
 
     void OnMouseUp() {
         if (transform.position.x < offsetPosition1.x && 
