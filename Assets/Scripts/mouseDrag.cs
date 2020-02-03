@@ -13,14 +13,14 @@ public class mouseDrag : MonoBehaviour {
     public MeshCollider mc;
     public Vector3 offsetPosition1;
     public Vector3 offsetPosition2;
-    public float offsetAmount = 1f;
+    private float offsetAmount = .5f;
     public bool finish;
     public Camera cam;
   
     // Start is called before the first frame update
     void Start()
     {
-        Camera cam = gameObject.GetComponent<Camera>();
+        //Camera cam = gameObject.GetComponent<Camera>();
         originalPosition = transform.position;
         originalRotation = transform.rotation;
         rb = GetComponent<Rigidbody>();
@@ -54,6 +54,9 @@ public class mouseDrag : MonoBehaviour {
     }
     void OnMouseDrag() {
             transform.position = GetMouseAsWorldPoint() + mOffset;
+            if (Input.GetKey("s")) {
+                Vector3.MoveTowards(transform.position, cam.transform.position, .5f);
+            }
     }
     
 

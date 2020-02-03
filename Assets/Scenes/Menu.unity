@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1526980366}
-  m_IndirectSpecularColor: {r: 0.28502658, g: 0.37139305, b: 0.49600944, a: 1}
+  m_IndirectSpecularColor: {r: 0.5651616, g: 0.6357208, b: 0.72196704, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -190,7 +190,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'A & D to rotate camera
 
-    M to see reference object'
+    drag objects to move them
+
+    restore the statue'
 --- !u!222 &103532044
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -276,7 +278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282840810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -332,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c72dd48492bfa1429a598ba46885043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: PrimaryScene
+  nextScene: level1_final
 --- !u!114 &302125489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,7 +701,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game
+  m_Text: 'statue restore
+
+'
 --- !u!222 &1841933026
 CanvasRenderer:
   m_ObjectHideFlags: 0
